@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Escola Santa luzia</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <div class="logo-admin">
+                <div class="logo-circle">
+                    <div class="logo" id="logoEscolaAdmin"></div>
+                </div>
+            </div>
+            <h1>Painel Administrativo</h1>
+            <p>Feira de Ciências 2025 - Escola Santa luzia</p>
+        </header>
+
+        <div class="admin-content">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total de Votos</h3>
+                    <div class="stat-number" id="totalVotos">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Projetos</h3>
+                    <div class="stat-number" id="totalProjetos">14</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Projeto Líder</h3>
+                    <div class="stat-text" id="projetoLider">-</div>
+                </div>
+            </div>
+
+            <div class="upload-section">
+                <h3>📷 Upload da Logo</h3>
+                <input type="file" id="uploadLogo" accept="image/*">
+                <p class="help-text">Faça upload da logo da escola (PNG, JPG)</p>
+            </div>
+
+            <div class="results-section">
+                <h2>Resultados Detalhados</h2>
+                <div class="results-actions">
+                    <button class="btn btn-export" id="btnExportPDF">
+                        📄 Exportar PDF
+                    </button>
+                    <button class="btn btn-export" id="btnExportCSV">
+                        📊 Exportar Planilha
+                    </button>
+                    <button class="btn btn-danger" id="btnResetAll">
+                        🔄 Resetar Todos os Votos
+                    </button>
+                </div>
+
+                <div class="results-table-container">
+                    <table class="results-table" id="tabelaResultados">
+                        <thead>
+                            <tr>
+                                <th>Projeto</th>
+                                <th>Votos</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoTabela"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="admin-actions">
+                <button class="btn btn-secondary" id="btnVoltar">
+                    ← Voltar para Votação
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biblioteca para geração de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+

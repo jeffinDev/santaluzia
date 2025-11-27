@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação – Escola Santa Luzia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo" id="logoEscola"></div>
+    </div>
+    
+    <h1 class="titulo">Votação Científica – Feira Interativa 2025</h1>
+    <p class="subtitulo">Escolha o projeto que mais chamou sua atenção!</p>
+    
+    <div class="container">
+        <div class="botoes-container" id="botoesProjetos">
+            <!-- Os botões serão gerados pelo JavaScript -->
+        </div>
+        
+        <div class="acoes">
+            <button class="botao-acao" id="btnResultados">
+                📊 Ver Resultados
+            </button>
+            <button class="botao-acao admin" id="btnAcessoAdmin">
+                🔐 Acesso Admin
+            </button>
+        </div>
+    </div>
+    
+    <div class="notificacao" id="notificacao">
+        <p>Obrigado por participar!</p>
+        <p>Seu voto foi registrado.</p>
+    </div>
+    
+    <div class="modal" id="modalResultados">
+        <div class="modal-conteudo">
+            <h2 class="modal-titulo">Resultados da Votação</h2>
+            <div id="listaResultados"></div>
+            <button class="botao-acao" id="btnFecharModal">Fechar</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modalAdmin">
+        <div class="modal-conteudo">
+            <h2 class="modal-titulo">Acesso Administrativo</h2>
+            <div class="admin-login">
+                <div class="input-group">
+                    <label for="usuarioAdmin">Usuário:</label>
+                    <input type="text" id="usuarioAdmin" placeholder="Digite o usuário">
+                </div>
+                <div class="input-group">
+                    <label for="senhaAdmin">Senha:</label>
+                    <input type="password" id="senhaAdmin" placeholder="Digite a senha">
+                </div>
+                <button class="botao-acao" id="btnLoginAdmin">Entrar no Painel Admin</button>
+                <button class="botao-acao cancelar" id="btnCancelarAdmin">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="rodape">
+        Feira de Ciências 2025 - Escola Santa Luzia
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
